@@ -147,15 +147,15 @@ static void render_goku_animation(void) {
       bitmap_frame_01,
       bitmap_frame_02,
       bitmap_frame_03,
-      bitmap_frame_01,
+      bitmap_frame_02,
 
   };
 
-  uint16_t frame_sizes[15] = {
+  uint16_t frame_sizes[4] = {
       sizeof(bitmap_frame_01),
       sizeof(bitmap_frame_02),
       sizeof(bitmap_frame_03),
-      sizeof(bitmap_frame_01),
+      sizeof(bitmap_frame_02),
   };
 
   if (timer_elapsed(timer) > FRAME_DURATION) {
