@@ -12,8 +12,8 @@ all:
 		-v $(PWD)/config:$(KEYMAP_PATH) \
 		-v $(PWD)/firmware:/app/firmware \
 		-e TIMESTAMP=$(TIMESTAMP) \
-		-e KEYMAP_NAME="default" \
+		-e KEYMAP_NAME="crkbd_custom" \
 		$(DOCKER_TAG)
 
 clean:
-	echo "Cleaning up..."
+	rm -f firmware/*
