@@ -7,8 +7,8 @@ enum layers { BASE, RAISE, LOWER, ADJUST };
 // HOMEROW ALIASES
 #define HOME_A LCTL_T(KC_A)
 #define HOME_S LALT_T(KC_S)
-#define HOME_D LSFT_T(KC_D)
-#define HOME_F LGUI_T(KC_F)
+#define HOME_D LGUI_T(KC_D)
+#define HOME_F LSFT_T(KC_F)
 
 #define HOME_J RSFT_T(KC_J)
 #define HOME_K RGUI_T(KC_K)

@@ -1,3 +1,5 @@
+#include <stdint.h>
+
 enum combos { COMBO_JK_ESC, COMBO_KJ_ESC, COMBO_GH_CAPS_LOCK, COMBO_LENGTH };
 
 uint16_t COMBO_LEN = COMBO_LENGTH;
