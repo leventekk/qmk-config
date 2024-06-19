@@ -2,7 +2,7 @@
 
 enum helpers { ___ = KC_TRNS, _x_ = KC_NO };
 
-enum layers { BASE, RAISE, LOWER, ADJUST };
+enum layers { BASE, RAISE, LOWER, ADJUST, NUMERIC };
 
 // HOMEROW ALIASES
 #define HOME_A LCTL_T(KC_A)
@@ -84,12 +84,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // │          │          │          │          │ PREV DESKTOP  │ NEXT
         // DESKTOP │    │             │          │          │ VOL DOWN    │  VOL
         // UP     │          │
-        _x_, _x_, _x_, _x_, PREV_DESKTOP, NEXT_DESKTOP, _x_, _x_, _x_, KC_VOLD,
-        KC_VOLU, _x_,
+        _x_, _x_, _x_, _x_, TG(NUMERIC), PREV_DESKTOP, NEXT_DESKTOP, _x_, _x_,
+        KC_VOLD, KC_VOLU, _x_,
         // ├─────────────┼──────────┼──────────┼─────────────┼─────────────┼──────────┤
         // SCREENSHOT   │    │             │          │          │ MUTE        │
         // PLAY_PAUSE  │          │
         _x_, _x_, _x_, _x_, _x_, SCREENSHOT, _x_, _x_, _x_, KC_MUTE, KC_MPLY,
         _x_,
-		// ╰──────────┴──────────┴──────────┼──────────┼───────────────┼──────────────┤
-        ___, ___, ___, ___, ___, ___)};
+        // ╰──────────┴──────────┴──────────┼──────────┼───────────────┼──────────────┤
+        ___, ___, ___, ___, ___, ___),
+    [NUMERIC] = LAYOUT_split_3x6_3(
+        // ╭──────────┬───────────┬──────────┬──────────┬──────────┬──────────╮
+        // │  TAB     │  Q       │  W       │  E       │  R        │  T       │
+        // │  Y       │  U        │  I       │  O       │  P       │BACKSPACE │
+        ___, KC_1, KC_2, KC_3, KC_4, KC_5, KC_6, KC_7, KC_8, KC_9, KC_0, ___,
+        // ├──────────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+        // │  CTRL    │  A       │  S       │  D       │  F        │  G       │
+        // │  H       │  J        │  K       │  L       │  ;       │  "       │
+        _x_, _x_, _x_, _x_, TG(NUMERIC), _x_, _x_, _x_, _x_, _x_, _x_, _x_,
+        // ├──────────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+        // │  SHIFT   │  Z       │  X       │  C       │  V        │  B       │
+        // │  N       │  M        │  ,       │  .       │  /       │  SHIFT   │
+        _x_, _x_, _x_, _x_, _x_, _x_, _x_, _x_, _x_, _x_, _x_, _x_,
+        // ┤──────────┼───────────┼──────────┼──────────┴──────────┴──────────╯
+        _x_, _x_, _x_, _x_, _x_, _x_),
+};
