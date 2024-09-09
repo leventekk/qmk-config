@@ -20,6 +20,10 @@ enum layers { BASE, RAISE, LOWER, ADJUST, NUMERIC };
 #include "./user/macros.c"
 #include "./user/oled.c"
 
+#if DEVICE == liatris
+#include "./user/rgb.c"
+#endif
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_split_3x6_3(
         // ╭──────────┬───────────┬──────────┬──────────┬──────────┬──────────╮
@@ -84,13 +88,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // │          │          │          │          │ PREV DESKTOP  │ NEXT
         // DESKTOP │    │             │          │          │ VOL DOWN    │  VOL
         // UP     │          │
-        _x_, _x_, _x_, _x_, TG(NUMERIC), PREV_DESKTOP, NEXT_DESKTOP, _x_, _x_,
-        KC_VOLD, KC_VOLU, _x_,
+        _x_, QK_UNDERGLOW_TOGGLE, QK_UNDERGLOW_MODE_PREVIOUS,
+        QK_UNDERGLOW_MODE_NEXT, TG(NUMERIC), PREV_DESKTOP, NEXT_DESKTOP, _x_,
+        _x_, KC_VOLD, KC_VOLU, _x_,
         // ├─────────────┼──────────┼──────────┼─────────────┼─────────────┼──────────┤
         // SCREENSHOT   │    │             │          │          │ MUTE        │
         // PLAY_PAUSE  │          │
-        _x_, _x_, _x_, _x_, _x_, SCREENSHOT, _x_, _x_, _x_, KC_MUTE, KC_MPLY,
-        _x_,
+        _x_, QK_UNDERGLOW_HUE_DOWN, QK_UNDERGLOW_HUE_UP, _x_, _x_, SCREENSHOT,
+        _x_, _x_, _x_, KC_MUTE, KC_MPLY, _x_,
         // ╰──────────┴──────────┴──────────┼──────────┼───────────────┼──────────────┤
         ___, ___, ___, ___, ___, ___),
     [NUMERIC] = LAYOUT_split_3x6_3(

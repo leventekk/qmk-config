@@ -9,7 +9,7 @@ RUN apt update -y &&\
 
 RUN git clone --recurse-submodules https://github.com/qmk/qmk_firmware.git
 
-FROM qmkfm/qmk_cli as runner
+FROM qmkfm/qmk_cli AS runner
 
 WORKDIR /app
 
