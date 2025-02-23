@@ -21,7 +21,6 @@ endef
 
 .SILENT: build, clean
 build:
-
 	$(call create_docker_tag)
 
 ifeq ($(device), liatris)

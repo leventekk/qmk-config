@@ -7,9 +7,9 @@ SPLIT_KEYBOARD = yes
 
 OLED_ENABLE = yes
 LTO_ENABLE = yes
-WPM_ENABLE = yes
+WPM_ENABLE = false
 
-RGBLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = false
 WS2812_DRIVER = vendor
 
 AUDIO_ENABLE = no           # Audio output on port C6

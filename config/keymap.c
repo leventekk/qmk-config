@@ -20,10 +20,6 @@ enum layers { BASE, RAISE, LOWER, ADJUST, NUMERIC };
 #include "./user/macros.c"
 #include "./user/oled.c"
 
-#if DEVICE == liatris
-#include "./user/rgb.c"
-#endif
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT_split_3x6_3(
         // ╭──────────┬───────────┬──────────┬──────────┬──────────┬──────────╮
