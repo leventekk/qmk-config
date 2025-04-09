@@ -1,17 +1,17 @@
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
-  return OLED_ROTATION_270;
+    return OLED_ROTATION_270;
 }
-#include "../display/oled_master.c"
-#include "../display/oled_slave.c"
+#    include "../display/oled_master.c"
+#    include "../display/oled_slave.c"
 
 bool oled_task_user(void) {
-  if (is_keyboard_master()) {
-    oled_render_master_state();
-  } else {
-    oled_render_slave_animation();
-  }
+    if (is_keyboard_master()) {
+        oled_render_master_state();
+    } else {
+        oled_render_slave_animation();
+    }
 
-  return false;
+    return false;
 }
 #endif
