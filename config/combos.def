@@ -1,0 +1,8 @@
+COMB(esc_comb, KC_ESC, KC_Q, KC_P)
+COMB(del_comb, KC_DEL, KC_U, KC_O)
+COMB(bsp_comb, KC_BSPC, KC_U, KC_P)
+COMB(capsword_comb, QK_CAPS_WORD_TOGGLE, KC_G, KC_H)
+
+// left row
+COMB(dquot_comb, KC_DQT, KC_S, KC_F)
+COMB(quot_comb, KC_QUOT, KC_X, KC_V)

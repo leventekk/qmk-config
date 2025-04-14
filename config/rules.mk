@@ -1,3 +1,5 @@
+VPATH += keyboards/gboards
+
 BOOTMAGIC_ENABLE = yes
 
 FORCE_NKRO = yes
@@ -10,7 +12,6 @@ LTO_ENABLE = yes
 WPM_ENABLE = false
 
 RGBLIGHT_ENABLE = false
-WS2812_DRIVER = vendor
 
 AUDIO_ENABLE = no           # Audio output on port C6
 MIDI_ENABLE = no            # MIDI controls
