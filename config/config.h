@@ -10,20 +10,13 @@
 
 #define FORCE_NKRO
 
-// Home-row mods: https://precondition.github.io/home-row-mods#tap-hold-configuration-settings
-// Configure the global tapping term (default: 200ms)
-#define TAPPING_TERM_PER_KEY
-#ifdef TAPPING_TERM_PER_KEY
-#    define TAPPING_TERM 170
-#else
-// Only for thumbs
-#    define TAPPING_TERM 200
-#endif
+#define TAPPING_TERM 200
+#define PERMISSIVE_HOLD
 #define QUICK_TAP_TERM 150
 
 // Combos
 #undef COMBO_TERM
-#define COMBO_TERM 35
+#define COMBO_TERM 50
 #define COMBO_MUST_TAP_PER_COMBO
 #define COMBO_TERM_PER_COMBO
 // All combos are specified from the base layer, saves space

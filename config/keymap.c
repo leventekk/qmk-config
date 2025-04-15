@@ -108,7 +108,6 @@ bool get_combo_must_tap(uint16_t index, combo_t *combo) {
 	}
 }
 
-
 bool combo_should_trigger(uint16_t combo_index, combo_t *combo) {
     // FIXME this doesn't seem to work?
     return true;
