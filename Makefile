@@ -19,7 +19,24 @@ define build_firmware
 endef
 
 
-.SILENT: build, clean
+.PHONY: help
+help:
+	@echo "QMK Firmware Builder Help"
+	@echo "========================"
+	@echo
+	@echo "Available commands:"
+	@echo
+	@echo "  make build              Build firmware for Pro Micro RP2040 (default)"
+	@echo "  make build device=liatris Build firmware for Liatris controller"
+	@echo "  make clean              Remove all built firmware files"
+	@echo
+	@echo "Notes:"
+	@echo "- Firmware files will be saved in the ./firmware directory"
+	@echo "- Keymap configuration is located in ./config"
+	@echo "- Timestamp format: YYYYMMDDHHMM (UTC)"
+	@echo "- Docker is required to build the firmware"
+
+.SILENT: build clean
 build:
 	$(call create_docker_tag)
 
@@ -31,3 +48,5 @@ endif
 
 clean:
 	rm -f firmware/*
+
+

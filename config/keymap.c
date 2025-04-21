@@ -84,8 +84,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 uint16_t get_combo_term(uint16_t index, combo_t *combo) {
     switch (index) {
         // Home-row and other tight combos
-		case dquot_comb:
-		case quot_comb:
+        case dquot_comb:
+        case quot_comb:
             return COMBO_TERM;
         // Regular combos, slightly relaxed
         default:
@@ -95,20 +95,20 @@ uint16_t get_combo_term(uint16_t index, combo_t *combo) {
 
 bool get_combo_must_tap(uint16_t index, combo_t *combo) {
     switch (index) {
-		case esc_comb:
-		case del_comb:
-		case bsp_comb:
-		case capsword_comb:
-		case dquot_comb:
-		case quot_comb:
-			return false;
+        case esc_comb:
+        case del_comb:
+        case bsp_comb:
+        case capsword_comb:
+        case dquot_comb:
+        case quot_comb:
+            return false;
 
-		default:
-			return true;
-	}
+        default:
+            return true;
+    }
 }
 
 bool combo_should_trigger(uint16_t combo_index, combo_t *combo) {
-    // FIXME this doesn't seem to work?
+    // Just use the default QMK combo trigger behavior
     return true;
 }

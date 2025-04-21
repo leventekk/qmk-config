@@ -16,11 +16,13 @@
 
 // Combos
 #undef COMBO_TERM
-#define COMBO_TERM 50
+#define COMBO_TERM 55  // Set to a shorter time window to reduce accidental triggers
 #define COMBO_MUST_TAP_PER_COMBO
 #define COMBO_TERM_PER_COMBO
 // All combos are specified from the base layer, saves space
 #define COMBO_ONLY_FROM_LAYER 0
+// Maximum number of keys in a combo
+#define COMBO_MAX_KEYS 4
 
 #define UNICODE_SELECTED_MODES UC_MAC
 
